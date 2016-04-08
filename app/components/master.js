@@ -1,19 +1,20 @@
 import React from 'react';
-import { Link } from "react-router";
+import { Link } from 'react-router';
+
+import Navbar from './header/navbar';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default class Master extends React.Component {
 
 	render() {
 		return (
-			<div className="container">
-			  <ul>
-			    <li><Link to="/">Home</Link></li>
-			    <li><Link to="/projects">Projects</Link></li>
-			    <li><Link to="/projects/jagadesh">Project - Jagadesh</Link></li>
-			    <li><Link to="/projects/varun">Project - Varun</Link></li>
-			  </ul>
-			  {this.props.children}
+			<div>
+				<Navbar />
+				<div className="container">
+					{this.props.children}
+				</div>
 			</div>
 		);
 	}
